@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d5b4d">
+  <meta name="description" content="Assistente local da Serraria São Francisco: notas, cálculo de vendas, estoque e preços.">
+  <title>Assistente da Serraria</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" data-page="inicio">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 10h30v8H9zM9 21h30v7H9zM9 31h30v7H9z"/><path d="M16 10v8m10-8v8M12 21v7m11-7v7m10-7v7M18 31v7m10-7v7"/></svg></span>
+        <span><strong>Serraria</strong><small>Assistente de balcão</small></span>
+      </a>
+      <nav class="side-nav">
+        <button data-page="inicio" class="nav-link active"><span class="nav-icon">⌂</span> Início</button>
+        <button data-page="venda" class="nav-link"><span class="nav-icon">＋</span> Nova nota</button>
+        <button data-page="estoque" class="nav-link"><span class="nav-icon">▤</span> Estoque</button>
+        <button data-page="historico" class="nav-link"><span class="nav-icon">↕</span> Histórico do estoque</button>
+        <button data-page="precos" class="nav-link"><span class="nav-icon">R$</span> Produtos e preços</button>
+        <button data-page="arquivos" class="nav-link"><span class="nav-icon">▧</span> Notas salvas e arquivos</button>
+      </nav>
+      <div class="sidebar-note"><span class="status-dot"></span><span>Seus dados ficam neste aparelho.</span></div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="today-label">ASSISTENTE DA SERRARIA</p>
+          <h1 id="page-title">Bom trabalho!</h1>
+        </div>
+        <button class="top-action" data-action="go-sale" aria-label="Criar nova nota"><span aria-hidden="true">＋</span><span class="top-action-label">Nova nota</span></button>
+      </header>
+
+      <main id="main-content" tabindex="-1"></main>
+
+      <nav class="bottom-nav" aria-label="Navegação móvel">
+        <button data-page="inicio" class="bottom-link active"><span class="bottom-icon">⌂</span><span>Início</span></button>
+        <button data-page="venda" class="bottom-link"><span class="bottom-icon">＋</span><span>Nota</span></button>
+        <button data-page="estoque" class="bottom-link"><span class="bottom-icon">▤</span><span>Estoque</span></button>
+        <button data-page="historico" class="bottom-link"><span class="bottom-icon">↕</span><span>Histórico</span></button>
+        <button data-page="precos" class="bottom-link"><span class="bottom-icon">R$</span><span>Produtos</span></button>
+        <button data-page="arquivos" class="bottom-link"><span class="bottom-icon">▧</span><span>Notas</span></button>
+      </nav>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-region" class="toast-region" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

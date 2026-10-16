@@ -1,0 +1,14 @@
+{
+  "name": "Assistente da Serraria",
+  "short_name": "Serraria",
+  "description": "Notas, cálculos, estoque e preços, com dados salvos no aparelho.",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f4ec",
+  "theme_color": "#1d5b4d",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
